@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/swirl.obj-ea472e61cdd7e02bf7bbdfed065a2787.mesh"
+
+[deps]
+
+files=[ "res://.import/swirl.obj-ea472e61cdd7e02bf7bbdfed065a2787.mesh" ]
+
+source_file="res://Assets/Models/Environment/swirl/swirl.obj"
+dest_files=[ "res://.import/swirl.obj-ea472e61cdd7e02bf7bbdfed065a2787.mesh", "res://.import/swirl.obj-ea472e61cdd7e02bf7bbdfed065a2787.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

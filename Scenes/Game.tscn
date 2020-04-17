@@ -1,3 +1,219 @@
-[gd_scene format=2]
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Models/Environment/bamboo/bamboo.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Assets/Models/Environment/Tree_1.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Assets/Models/Environment/Tree_2.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Assets/Models/Environment/Ground.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://Assets/Models/Environment/Fence.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Models/Environment/bamboo/diffuse.tga" type="Texture" id=7]
+
+[sub_resource type="Skin" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+params_diffuse_mode = 4
+params_specular_mode = 3
+albedo_texture = ExtResource( 7 )
+
+[sub_resource type="SpatialMaterial" id=4]
+params_diffuse_mode = 4
+params_specular_mode = 3
+albedo_texture = ExtResource( 7 )
+rim_enabled = true
+rim = 0.18
+rim_tint = 0.31
 
 [node name="Game" type="Spatial"]
+transform = Transform( 1, 2.86505e-09, -3.77122e-09, 4.72915e-09, -0.647189, 0.76233, -2.56577e-10, -0.76233, -0.647189, 0, -0.904192, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 1.92901e-15, -2.7478e-15, 1.38778e-17, 0.999999, 2.08616e-07, 1.95677e-15, -2.08616e-07, 0.999999, 17.1764, -0.0677073, 7.53513 )
+
+[node name="Models" type="Node" parent="."]
+
+[node name="StaticBody" type="StaticBody" parent="Models"]
+transform = Transform( 8, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0 )
+
+[node name="Ground" type="MeshInstance" parent="Models"]
+transform = Transform( 8, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0 )
+mesh = ExtResource( 4 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="bamboo" type="MeshInstance" parent="Models"]
+transform = Transform( -0.00986144, 0, 0.00165891, 0, 0.01, 0, -0.00165891, 0, -0.00986144, 0.203107, 0, -3.90846 )
+mesh = ExtResource( 1 )
+skin = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="bamboo2" type="MeshInstance" parent="Models"]
+transform = Transform( -0.00103962, 0, 0.00590925, 0, 0.005, 0, -0.00590925, 0, -0.00103962, 2.09693, -0.186996, -0.817245 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 4 )
+
+[node name="Tree_1" type="MeshInstance" parent="Models"]
+transform = Transform( -1.42268, 0, -2.64121, 0, 1.5, 0, 2.64121, 0, -1.42268, 7.46862, 0, -13.4771 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+
+[node name="Tree_2" type="MeshInstance" parent="Models"]
+transform = Transform( 0.245631, 0.0391578, -0.0411386, -0.0243272, 0.447167, -0.0138839, 0.0396714, 0.0317598, 0.246201, 0.719017, 0, -2.41891 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+material/21 = null
+material/22 = null
+material/23 = null
+material/24 = null
+material/25 = null
+material/26 = null
+material/27 = null
+material/28 = null
+material/29 = null
+material/30 = null
+material/31 = null
+material/32 = null
+material/33 = null
+material/34 = null
+material/35 = null
+material/36 = null
+material/37 = null
+material/38 = null
+material/39 = null
+material/40 = null
+material/41 = null
+
+[node name="Tree_3" type="MeshInstance" parent="Models"]
+transform = Transform( 1.48109, 0.212927, -0.187835, -0.135972, 2.18774, 0.0807351, 0.194602, -0.0919463, 1.486, -0.577763, -0.644465, 0.88168 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+material/21 = null
+material/22 = null
+material/23 = null
+material/24 = null
+material/25 = null
+material/26 = null
+material/27 = null
+material/28 = null
+material/29 = null
+material/30 = null
+material/31 = null
+material/32 = null
+material/33 = null
+material/34 = null
+material/35 = null
+material/36 = null
+material/37 = null
+material/38 = null
+material/39 = null
+material/40 = null
+material/41 = null
+
+[node name="Tree_4" type="MeshInstance" parent="Models"]
+transform = Transform( -0.983153, -0.0940435, -0.612962, 0.714735, 0.357861, -0.768829, 0.291658, -1.19398, -0.182154, 1.97598, -1.91608, -3.32654 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+
+[node name="Fence" type="MeshInstance" parent="Models"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.233438, 0.252193, -29.5439 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Fence2" type="MeshInstance" parent="Models"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03536, 0.252193, -29.5439 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Fence3" type="MeshInstance" parent="Models"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.93435, 0.252193, -29.5439 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Fence4" type="MeshInstance" parent="Models"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70307, 0.252193, -29.5439 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Fence5" type="MeshInstance" parent="Models"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5022, 0.252193, -29.5439 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Fence6" type="MeshInstance" parent="Models"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2934, 0.252193, -29.5439 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Fence7" type="MeshInstance" parent="Models"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0772, 0.252193, -29.5439 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Fence8" type="MeshInstance" parent="Models"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8757, 0.252193, -29.5439 )
+mesh = ExtResource( 5 )
+material/0 = null

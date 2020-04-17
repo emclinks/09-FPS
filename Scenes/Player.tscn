@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://default_env.tres" type="Environment" id=1]
+[ext_resource path="res://Scenes/Handmade_Shotgun.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.5
+height = 1.5
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.399309, 0 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.25, 0 )
+shape = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+environment = ExtResource( 1 )
+current = true
+
+[node name="Handmade_Shotgun" parent="Camera" instance=ExtResource( 2 )]
+transform = Transform( -0.15, 0, 4.88762e-08, 0, 0.15, 0, -4.88762e-08, 0, -0.15, 0.25, -0.25, -0.5 )
+
+[node name="Muzzle" type="Spatial" parent="Camera/Handmade_Shotgun"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0787286, 1.27257, 3.2216 )
