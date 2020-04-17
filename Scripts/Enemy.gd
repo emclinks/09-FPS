@@ -18,12 +18,12 @@ func _on_Timer_timeout ():
 	if translation.distance_to(player.translation) <= attackDist:
 		attack()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var dir = (player.translation - translation).normalized()
 	dir.y = 0
 	move_and_slide(dir * moveSpeed, Vector3.UP)
 
-func take_damage (damage):
+func take_damage(damage):
 	health -= damage
 	if health <= 0:
 		die()
